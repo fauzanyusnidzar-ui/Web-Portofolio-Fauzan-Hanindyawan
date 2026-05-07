@@ -493,23 +493,34 @@
   }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
+/* --- Bagian CSS Utama (Tambahkan ini) --- */
+.hero-stats {
+    display: none; /* Ini akan menyembunyikan kotak hitam secara total */
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; text-align: center; }
     .hero-text { order: 2; }
     .hero-img-wrap { order: 1; }
     .hero-ctas { justify-content: center; }
     .hero-desc { margin-left: auto; margin-right: auto; }
     .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .hero-img-ring { width: 260px; height: 260px; }
-    .hero-stats { flex-direction: column; gap: 0.5rem; }
+    .hero-img-ring { 
+        width: 260px; 
+        height: 260px; 
+        margin: 0 auto; /* Memastikan foto tetap di tengah setelah kotak dihapus */
+    }
+    
+    /* Baris .hero-stats di sini dihapus karena sudah tidak diperlukan */
     .nav-links { gap: 1.2rem; }
-  }
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
     .nav-links { display: none; }
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .projects-grid { grid-template-columns: 1fr; }
-  }
+}
 
 </style>
 </head>
