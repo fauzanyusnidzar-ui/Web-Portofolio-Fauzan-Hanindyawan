@@ -510,42 +510,7 @@
     .skills-grid { grid-template-columns: repeat(2, 1fr); }
     .projects-grid { grid-template-columns: 1fr; }
   }
-  /* --- FIX UNTUK MOBILE --- */
-@media (max-width: 768px) {
-  /* 1. Atur layout hero agar menumpuk vertikal */
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-  }
 
-  /* 2. Pusatkan teks dan deskripsi */
-  .hero-desc {
-    margin: 0 auto 2rem;
-  }
-
-  .hero-ctas {
-    justify-content: center;
-  }
-
-  /* 3. PERBAIKAN UTAMA: Pindahkan kartu statistik ke bawah foto */
-  .hero-stats {
-    position: relative; /* Menghapus sistem melayang/absolute */
-    bottom: 0;
-    left: 0;
-    transform: none;    /* Reset koordinat tengah */
-    margin: 1.5rem auto 0; /* Memberi jarak di bawah lingkaran foto */
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-  }
-
-  /* 4. Sesuaikan ukuran lingkaran foto agar tidak terlalu besar di HP */
-  .hero-img-ring {
-    width: 280px;
-    height: 280px;
-  }
-}
 </style>
 </head>
 <body>
